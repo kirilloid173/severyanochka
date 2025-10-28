@@ -1,0 +1,27 @@
+div.search-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+
+    p {
+        font-size: 24px;
+        font-family: 'Montserrat-bold', Arial, Helvetica, sans-serif;
+    }
+
+    input {
+        padding: 8px 16px;
+        width: 100%;
+        border: 1px solid #70c05b;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    img.search-block__search-icon {
+        position: absolute;
+        right: -20px;
+        bottom: 6px;
+    }
+}

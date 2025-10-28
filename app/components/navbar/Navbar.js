@@ -1,4 +1,4 @@
-import './style.scss';
+import './index.scss';
 import Image from 'next/image';
 export default function Navbar() {
     return (
