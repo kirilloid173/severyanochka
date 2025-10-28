@@ -1,0 +1,11 @@
+div.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    margin: 24px 0;
+
+    p.breadcrumbs__search-text {
+        color: #8f8f8fed;
+    }
+}
