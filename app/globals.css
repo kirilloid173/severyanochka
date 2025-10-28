@@ -8,6 +8,11 @@
     src: url('./fonts/Montserrat/Montserrat-Bold.ttf');
 }
 
+@font-face {
+    font-family: 'Montserrat-medium';
+    src: url('./fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
