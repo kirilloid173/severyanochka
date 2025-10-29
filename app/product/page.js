@@ -13,7 +13,6 @@ export default function Product() {
                     three_link='Молоко, сыр, яйцо'
                     four_link='Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г'
                 />
-                
             </div>
             <Footer />
         </>

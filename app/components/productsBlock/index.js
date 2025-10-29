@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import './index.scss';
-import ProductCard from '../product-card';
+import ProductCard from '../productCard';
 export default function ProductsBlock() {
     return (
         <>
