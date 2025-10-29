@@ -1,7 +1,7 @@
-import Search from '@/app/components/search/Search';
-import './style.scss';
+import Search from '@/app/components/search-block/Search';
 import BreadCrumbs from '@/app/components/breadcrumbs/BreadCrumbs';
 import ProductsBlock from '@/app/components/products-block';
+import './index.scss';
 
 export default function ProductsPage() {
     return (
