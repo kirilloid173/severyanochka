@@ -13,6 +13,33 @@ export default function ProductsBlock() {
                 description_card='Г/Ц Блинчики с мясом вес, Россия'
                 reviews_stars={2}
             />
+            <ProductCard
+                image_src='/images/png/card_block/milk_card.png'
+                image_alt='pancakes'
+                discount='-50%'
+                price_card='44,50'
+                price_default='50,50'
+                description_card='Молоко ПРОСТОКВАШИНО паст. питьевое цельное отбо...'
+                reviews_stars={3}
+            />
+            <ProductCard
+                image_src='/images/png/card_block/sausage_card.png'
+                image_alt='pancakes'
+                discount='-50%'
+                price_card='44,50'
+                price_default='50,50'
+                description_card='Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчич...'
+                reviews_stars={5}
+            />
+            <ProductCard
+                image_src='/images/png/card_block/hot_dog_card.png'
+                image_alt='pancakes'
+                discount='-50%'
+                price_card='44,50'
+                price_default='50,50'
+                description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
+                reviews_stars={4.5}
+            />
         </div>
     );
 }

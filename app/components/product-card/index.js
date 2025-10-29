@@ -1,3 +1,4 @@
+import './index.scss';
 import Image from 'next/image';
 import ProductReviews from '../product-reviews';
 

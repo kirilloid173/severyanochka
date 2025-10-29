@@ -5,6 +5,7 @@ div.search-block {
     justify-content: center;
     gap: 24px;
     position: relative;
+    margin-bottom: 48px;
 
     p {
         font-size: 24px;
@@ -13,15 +14,19 @@ div.search-block {
 
     input {
         padding: 8px 16px;
-        width: 100%;
+        width: calc(100% - 32px);
         border: 1px solid #70c05b;
         border-radius: 4px;
         font-size: 16px;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     img.search-block__search-icon {
         position: absolute;
-        right: -20px;
+        right: 10px;
         bottom: 6px;
     }
 }

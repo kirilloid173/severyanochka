@@ -1,0 +1,98 @@
+.block-cards {
+    .block-cards__card {
+        width: 272px;
+        height: 349px;
+        border-radius: 4px;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+
+        .card__image-block {
+            position: relative;
+
+            .image-block__heart {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 8px;
+            }
+
+            p.image-block__discount {
+                padding: 4px 8px;
+                background-color: #ff6633;
+                border-radius: 4px;
+                width: max-content;
+                font-size: 16px;
+                color: #ffffff;
+                position: absolute;
+                left: 0px;
+                bottom: 14px;
+            }
+        }
+
+        .image-block__price-line {
+            padding: 0 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .price-line__price-left {
+                display: flex;
+                flex-direction: column;
+
+                .price-left__bold-price {
+                    font-family: 'Montserrat-bold';
+                    font-size: 18px;
+                    color: #414141;
+                }
+
+                .price-left__descr-price {
+                    font-size: 12px;
+                    color: #8f8f8f;
+                }
+            }
+            .price-line__price-right {
+                display: flex;
+                flex-direction: column;
+
+                .price-right__price {
+                    font-size: 16px;
+                    color: #414141;
+                }
+
+                .price-right__descr-price {
+                    font-size: 12px;
+                    color: #8f8f8f;
+                }
+            }
+        }
+        .card__description {
+            padding: 4px 8px;
+            font-size: 16px;
+            color: #414141;
+            width: 256px;
+            font-family: 'Montserrat-medium', Arial, Helvetica, sans-serif;
+            margin: 4px 0px;
+        }
+
+        .card__stars {
+            padding: 4px 8px;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        button.card__add-to-cart-button {
+            margin: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #70c05b;
+            font-size: 16px;
+            color: #70c05b;
+            background-color: transparent;
+            padding: 8px;
+            font-family: 'Montserrat-medium', Arial, Helvetica, sans-serif;
+        }
+    }
+}
