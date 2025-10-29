@@ -7,7 +7,13 @@ export default function Product() {
         <>
             <Navbar />
             <div className='content'>
-                <BreadCrumbs />
+                <BreadCrumbs
+                    first_link='Главная'
+                    second_link='Каталог'
+                    three_link='Молоко, сыр, яйцо'
+                    four_link='Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г'
+                />
+                
             </div>
             <Footer />
         </>
