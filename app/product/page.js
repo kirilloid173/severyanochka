@@ -1,6 +1,7 @@
 import BreadCrumbs from '../components/breadcrumbs/BreadCrumbs';
 import Footer from '../components/footer/index';
 import Navbar from '../components/navbar/index';
+import MainBlockCard from '../components/mainBlockCard';
 import './index.scss';
 export default function Product() {
     return (
@@ -13,6 +14,7 @@ export default function Product() {
                     three_link='Молоко, сыр, яйцо'
                     four_link='Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж, Россия, 180 г'
                 />
+                <MainBlockCard />
             </div>
             <Footer />
         </>
