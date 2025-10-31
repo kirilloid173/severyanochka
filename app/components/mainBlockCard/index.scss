@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 120px;
 
     p.main-block__title {
         font-family: 'Montserrat-bold', Arial, Helvetica, sans-serif;
         font-size: 24px;
         margin-bottom: 16px;
+        color: #414141;
     }
 
     .main-block__info-about-card {
@@ -240,5 +242,23 @@
                 }
             }
         }
+    }
+}
+
+.recommendations-block {
+    display: flex;
+    flex-direction: column;
+
+    .recommendations-block__title {
+        color: #414141;
+        font-size: 36px;
+        font-family: 'Montserrat-bold', Arial, Helvetica;
+        margin-bottom: 40px;
+    }
+
+    .recommendations-block__cards {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
     }
 }

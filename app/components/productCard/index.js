@@ -6,6 +6,7 @@ export default function ProductCard({
     image_src,
     image_alt,
     discount,
+    price_type,
     price_card,
     price_default,
     description_card,
@@ -27,17 +28,34 @@ export default function ProductCard({
                     width={24}
                     height={24}
                 />
-                <p className='image-block__discount'>{discount}</p>
+                {discount ? (
+                    <p className='image-block__discount'>{discount}</p>
+                ) : null}
             </div>
             <div className='image-block__price-line'>
                 <div className='price-line__price-left'>
-                    <p className='price-left__bold-price'>{price_card} ₽</p>
-                    <p className='price-left__descr-price'>С картой</p>
+                    {price_card && price_type && price_type === 'default' ? (
+                        <>
+                            <p className='price-left__bold-price'>
+                                {price_card} ₽
+                            </p>
+                        </>
+                    ) : price_card || !price_type ? (
+                        <>
+                            <p className='price-left__bold-price'>
+                                {price_card} ₽
+                            </p>
+                            <p className='price-left__descr-price'>С картой</p>
+                        </>
+                    ) : null}
                 </div>
-                <div className='price-line__price-right'>
-                    <p className='price-right__price'>{price_default} ₽</p>
-                    <p className='price-right__descr-price'>Обычная</p>
-                </div>
+                {(price_default && price_type && price_type !== 'default') ||
+                !price_type ? (
+                    <div className='price-line__price-right'>
+                        <p className='price-right__price'>{price_default} ₽</p>
+                        <p className='price-right__descr-price'>Обычная</p>
+                    </div>
+                ) : null}
             </div>
             <p className='card__description'>{description_card}</p>
             <div className='card__stars'>
