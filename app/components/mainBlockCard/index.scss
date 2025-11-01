@@ -442,3 +442,46 @@
     }
 }
 //
+.discount-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 90px;
+
+    .discount-block__title-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .title-block__title {
+            font-size: 36px;
+            font-family: 'Montserrat-bold', Arial, Helvetica;
+            color: #414141;
+            margin-bottom: 40px;
+        }
+
+        .title-block__button-all-discounts {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-left: 975px;
+            gap: 8px;
+
+            p {
+                font-size: 16px;
+                font-family: 'Montserrat-medium', Arial, Helvetica;
+                color: #414141;
+            }
+
+            .button-all-discounts__arrow {
+                padding-top: 2px;
+            }
+        }
+    }
+
+    .discount-block__cards {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+}

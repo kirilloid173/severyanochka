@@ -335,6 +335,58 @@ export default function MainBlockCard() {
                     </div>
                 </div>
             </div>
+            {/* end reviews block */}
+            <div className='discount-block'>
+                <div className='discount-block__title-block'>
+                    <p className='title-block__title'>Акции</p>
+                    <div className='title-block__button-all-discounts'>
+                        <p>Все акции</p>
+                        <Image
+                            src={
+                                '/images/svg/card_page/discounts/arrow_right_icon.svg'
+                            }
+                            alt='arrow'
+                            width={7}
+                            height={13}
+                            className='button-all-discounts__arrow'
+                        />
+                    </div>
+                </div>
+                <div className='discount-block__cards'>
+                    <ProductCard
+                        image_src='/images/png/card_block/pancakes_card.png'
+                        image_alt='hot_dog'
+                        price_card='44,50'
+                        price_default='50,50'
+                        description_card='Г/Ц Блинчики с мясом вес, Россия'
+                        reviews_stars={2}
+                    />
+                    <ProductCard
+                        image_src='/images/png/card_block/milk_card.png'
+                        image_alt='hot_dog'
+                        price_card='44,50'
+                        price_default='50,50'
+                        description_card='Молоко ПРОСТОКВАШИНО паст. питьевое цельное отбо...'
+                        reviews_stars={3}
+                    />
+                    <ProductCard
+                        image_src='/images/png/card_block/sausage_card.png'
+                        image_alt='hot_dog'
+                        price_card='44,50'
+                        price_default='50,50'
+                        description_card='Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчич...'
+                        reviews_stars={5}
+                    />
+                    <ProductCard
+                        image_src='/images/png/card_block/hot_dog_card.png'
+                        image_alt='hot_dog'
+                        price_card='44,50'
+                        price_default='50,50'
+                        description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
+                        reviews_stars={4.5}
+                    />
+                </div>
+            </div>
         </>
     );
 }
