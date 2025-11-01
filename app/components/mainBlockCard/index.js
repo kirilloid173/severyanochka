@@ -1,5 +1,6 @@
 import ProductReviews from '../product-reviews';
 import ProductCard from '../productCard';
+import ReviewsBlock from '../reviewsBlock';
 import './index.scss';
 import Image from 'next/image';
 
@@ -218,6 +219,120 @@ export default function MainBlockCard() {
                         description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
                         reviews_stars={2}
                     />
+                </div>
+            </div>
+            {/* end recommendations block */}
+            <div className='reviews-block'>
+                <p className='reviews-block__title'>Отзывы</p>
+                <div className='reviews-block__inner-content'>
+                    <div className='inner-content__stars-left'>
+                        <div className='stars-left__title-block'>
+                            <ProductReviews reviews_stars={4} />
+                            <p className='title-block__number-review'>4 из 5</p>
+                        </div>
+                        <div className='inner-content__count-reviews'>
+                            <p>5</p>
+                            <div className='count-reviews__stars'>
+                                <ProductReviews reviews_stars={4} />
+                            </div>
+                            <p>1</p>
+                        </div>
+                        <div className='inner-content__count-reviews'>
+                            <p>4</p>
+                            <div className='count-reviews__stars'>
+                                <ProductReviews reviews_stars={4} />
+                            </div>
+                            <p>1</p>
+                        </div>
+                        <div className='inner-content__count-reviews'>
+                            <p>3</p>
+                            <div className='count-reviews__stars'>
+                                <ProductReviews reviews_stars={4} />
+                            </div>
+                            <p>0</p>
+                        </div>
+                        <div className='inner-content__count-reviews'>
+                            <p>2</p>
+                            <div className='count-reviews__stars'>
+                                <ProductReviews reviews_stars={4} />
+                            </div>
+                            <p>0</p>
+                        </div>
+                        <div className='inner-content__count-reviews'>
+                            <p>1</p>
+                            <div className='count-reviews__stars'>
+                                <ProductReviews reviews_stars={4} />
+                            </div>
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div className='inner-content__block-messages'>
+                        <ReviewsBlock
+                            name='Татьяна'
+                            stars={5}
+                            date={'22.02.2020'}
+                            comment='приятный вкус'
+                        />
+                        <ReviewsBlock
+                            name='Мария'
+                            stars={4}
+                            date={'22.02.2020'}
+                            comment='Масло среднее, есть вкуснее'
+                        />
+                        <ReviewsBlock
+                            name='Алексей'
+                            stars={1}
+                            date={'22.02.2020'}
+                            comment='Покупали в том числе в этом весе. Масло по вкусу и органолептическим свойствам совершенно не похоже на натуральное. Упаковка выглядит как напечатанная на дешёвом принтере. На наш взгляд продукт является подделкой или контрафактной продукцией. Просим разобраться.'
+                        />
+                        <div className='inner-content__your-comment-block'>
+                            <div className='your-comment-block__place-stars'>
+                                <p className='place-stars__title'>
+                                    Ваша оценка
+                                </p>
+                                <div className='place-stars__stars'>
+                                    <Image
+                                        src='/images/svg/card_page/reviews/empty_star.svg'
+                                        alt='star'
+                                        width={24}
+                                        height={24}
+                                    />
+                                    <Image
+                                        src='/images/svg/card_page/reviews/empty_star.svg'
+                                        alt='star'
+                                        width={24}
+                                        height={24}
+                                    />
+                                    <Image
+                                        src='/images/svg/card_page/reviews/empty_star.svg'
+                                        alt='star'
+                                        width={24}
+                                        height={24}
+                                    />
+                                    <Image
+                                        src='/images/svg/card_page/reviews/empty_star.svg'
+                                        alt='star'
+                                        width={24}
+                                        height={24}
+                                    />
+                                    <Image
+                                        src='/images/svg/card_page/reviews/empty_star.svg'
+                                        alt='star'
+                                        width={24}
+                                        height={24}
+                                    />
+                                </div>
+                            </div>
+                            <textarea
+                                className='your-comment-block__textarea'
+                                placeholder='Отзыв'
+                                maxLength={750}
+                            />
+                            <button className='your-comment-block__send-review-button'>
+                                Отправить отзыв
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

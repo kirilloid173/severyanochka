@@ -1,0 +1,111 @@
+.reviews-block {
+    display: flex;
+    flex-direction: column;
+
+    .reviews-block__inner-content {
+        display: flex;
+        flex-direction: row;
+
+        .inner-content__authors-reviews {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .authors-reviews__review {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .review__author {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+
+                    img.author__logo {
+                        border: 1px solid #f3f2f1;
+                        padding: 10px;
+                        border-radius: 47px;
+                    }
+
+                    p.author__name {
+                        font-family: 'Montserrat-medium', Arial, Helvetica;
+                        font-size: 16px;
+                        color: #414141;
+                    }
+                }
+
+                .review__date {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: 177px;
+
+                    .date__stars {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 4px;
+                        margin-right: 16px;
+                    }
+
+                    .date__date-number {
+                        font-family: 'Montserrat-medium', Arial, Helvetica;
+                        font-size: 12px;
+                        color: #8f8f8f;
+                    }
+                }
+
+                .review__comment {
+                    font-size: 16px;
+                    color: #414141;
+                    width: 688px;
+                }
+            }
+        }
+    }
+
+    .reviews-block__title {
+        font-size: 36px;
+        font-family: 'Montserrat-bold', Arial, Helvetica;
+        color: #414141;
+        margin-bottom: 40px;
+    }
+
+    .inner-content__stars-left {
+        display: flex;
+        flex-direction: column;
+        width: 169px;
+        gap: 8px;
+        margin-right: 144px;
+
+        .stars-left__title-block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 4px;
+            margin-bottom: 16px;
+
+            p.title-block__number-review {
+                font-size: 18px;
+                color: #414141;
+                font-family: 'Montserrat-bold', Arial, Helvetica;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    .inner-content__count-reviews {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 168px;
+
+        .count-reviews__stars {
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            margin: 0 30px;
+        }
+    }
+}
