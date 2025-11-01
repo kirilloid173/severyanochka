@@ -30,3 +30,9 @@ div.search-block {
         bottom: 6px;
     }
 }
+
+@media (max-width: 1440px) {
+    div.search-block {
+        width: 95vw;
+    }
+}

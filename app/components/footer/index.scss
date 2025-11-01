@@ -1,5 +1,4 @@
 div.footer {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -53,5 +52,25 @@ div.footer {
                 font-family: 'Montserrat-medium', Arial, Helvetica, sans-serif;
             }
         }
+    }
+}
+
+@media (max-width: 1440px) {
+    .footer {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: flex;
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer {
+        display: flex;
+    }
+
+    .footer-mobile {
+        display: none;
     }
 }
