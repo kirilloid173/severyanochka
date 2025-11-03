@@ -12,6 +12,10 @@ export default function ProductCard({
     description_card,
     reviews_stars,
 }) {
+    const converted_description =
+        description_card.length > 55
+            ? description_card.slice(0, 55) + '...'
+            : description_card;
     return (
         <div className='block-cards__card'>
             <div className='card__image-block'>
@@ -20,6 +24,7 @@ export default function ProductCard({
                     alt={image_alt}
                     width={272}
                     height={160}
+                    unoptimized
                 />
                 <Image
                     className='image-block__heart'
@@ -29,7 +34,7 @@ export default function ProductCard({
                     height={24}
                 />
                 {discount ? (
-                    <p className='image-block__discount'>{discount}</p>
+                    <p className='image-block__discount'>-{discount}%</p>
                 ) : null}
             </div>
             <div className='image-block__price-line'>
@@ -52,12 +57,14 @@ export default function ProductCard({
                 {(price_default && price_type && price_type !== 'default') ||
                 !price_type ? (
                     <div className='price-line__price-right'>
-                        <p className='price-right__price'>{price_default} ₽</p>
+                        <p className='price-right__price'>
+                            {price_default * 2} ₽
+                        </p>
                         <p className='price-right__descr-price'>Обычная</p>
                     </div>
                 ) : null}
             </div>
-            <p className='card__description'>{description_card}</p>
+            <p className='card__description'>{converted_description}</p>
             <div className='card__stars'>
                 <ProductReviews reviews_stars={reviews_stars} />
             </div>

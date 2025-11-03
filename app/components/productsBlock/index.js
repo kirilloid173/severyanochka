@@ -1,154 +1,27 @@
 import Image from 'next/image';
 import './index.scss';
 import ProductCard from '../productCard';
-export default function ProductsBlock() {
+export default async function ProductsBlock() {
+    const res = await fetch('https://dummyjson.com/products?limit=16', {
+        cache: 'no-store',
+    });
+    const data = await res.json();
+
     return (
         <>
             <div className='block-cards'>
-                <ProductCard
-                    image_src='/images/png/card_block/pancakes_card.png'
-                    image_alt='pancakes'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Г/Ц Блинчики с мясом вес, Россия'
-                    reviews_stars={2}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/milk_card.png'
-                    image_alt='milk'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Молоко ПРОСТОКВАШИНО паст. питьевое цельное отбо...'
-                    reviews_stars={3}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/sausage_card.png'
-                    image_alt='sausages'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчич...'
-                    reviews_stars={5}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/hot_dog_card.png'
-                    image_alt='hot_dog'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
-                    reviews_stars={4.5}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/pancakes_card.png'
-                    image_alt='pancakes'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Г/Ц Блинчики с мясом вес, Россия'
-                    reviews_stars={2}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/milk_card.png'
-                    image_alt='milk'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Молоко ПРОСТОКВАШИНО паст. питьевое цельное отбо...'
-                    reviews_stars={3}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/sausage_card.png'
-                    image_alt='sausages'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчич...'
-                    reviews_stars={5}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/hot_dog_card.png'
-                    image_alt='hot_dog'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
-                    reviews_stars={4.5}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/pancakes_card.png'
-                    image_alt='pancakes'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Г/Ц Блинчики с мясом вес, Россия'
-                    reviews_stars={2}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/milk_card.png'
-                    image_alt='milk'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Молоко ПРОСТОКВАШИНО паст. питьевое цельное отбо...'
-                    reviews_stars={3}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/sausage_card.png'
-                    image_alt='sausages'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчич...'
-                    reviews_stars={5}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/hot_dog_card.png'
-                    image_alt='hot_dog'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
-                    reviews_stars={4.5}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/pancakes_card.png'
-                    image_alt='pancakes'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Г/Ц Блинчики с мясом вес, Россия'
-                    reviews_stars={2}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/milk_card.png'
-                    image_alt='milk'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Молоко ПРОСТОКВАШИНО паст. питьевое цельное отбо...'
-                    reviews_stars={3}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/sausage_card.png'
-                    image_alt='sausages'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчич...'
-                    reviews_stars={5}
-                />
-                <ProductCard
-                    image_src='/images/png/card_block/hot_dog_card.png'
-                    image_alt='hot_dog'
-                    discount='-50%'
-                    price_card='44,50'
-                    price_default='50,50'
-                    description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
-                    reviews_stars={4.5}
-                />
+                {data.products.map((item) => (
+                    <ProductCard
+                        key={item.id}
+                        image_src={item.images[0]}
+                        image_alt='card_image'
+                        discount={item.discountPercentage}
+                        price_card={item.price}
+                        price_default={item.price}
+                        description_card={item.description}
+                        reviews_stars={item.rating}
+                    />
+                ))}
             </div>
             <button className='load-more-cards'>Загрузить ещё</button>
         </>
