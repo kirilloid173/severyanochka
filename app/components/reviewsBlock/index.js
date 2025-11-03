@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import ProductReviews from '../product-reviews';
 import './index.scss';
+import './mobile.scss';
 export default function ReviewsBlock({ name, stars, date, comment }) {
     return (
         <div className='inner-content__authors-reviews'>

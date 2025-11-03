@@ -1,8 +1,9 @@
 import ProductReviews from '../product-reviews';
 import ProductCard from '../productCard';
 import ReviewsBlock from '../reviewsBlock';
-import './index.scss';
 import Image from 'next/image';
+import './index.scss';
+import './mobile.scss';
 
 export default function MainBlockCard() {
     return (
@@ -90,8 +91,8 @@ export default function MainBlockCard() {
                                 '/images/png/card_page/main_block_info/oil_box_front_big.png'
                             }
                             alt='big_image_card'
-                            width={608}
-                            height={496}
+                            fill
+                            style={{ objectFit: 'cover' }}
                         />
                         <p className='main-image-block__discount'>-50%</p>
                     </div>

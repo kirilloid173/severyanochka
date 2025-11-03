@@ -55,22 +55,44 @@ div.footer {
     }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1140px) {
     .footer {
-        display: none;
+        display: flex;
     }
 
     .footer-mobile {
-        display: flex;
+        display: none;
+    }
+
+    .footer-small-mobile {
+        display: none;
     }
 }
 
-@media (min-width: 1440px) {
+@media (max-width: 1140px) and (min-width: 650px) {
     .footer {
+        display: none;
+    }
+
+    .footer-mobile {
         display: flex;
+    }
+
+    .footer-small-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer {
+        display: none;
     }
 
     .footer-mobile {
         display: none;
+    }
+
+    .footer-small-mobile {
+        display: flex;
     }
 }

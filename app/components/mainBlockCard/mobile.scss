@@ -1,0 +1,94 @@
+@media (max-width: 1240px) {
+    .main-block__property-card {
+        align-items: center;
+    }
+
+    .main-block__info-block {
+        width: 350px;
+    }
+
+    .recommendations-block__cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1240px) {
+    .main-block__info-block {
+        width: 424px;
+    }
+}
+
+@media (max-width: 1020px) {
+    textarea.your-comment-block__textarea {
+        margin-right: 25px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .main-block {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 1160px) and (min-width: 850px) {
+    .main-block__main-image-block {
+        width: 300px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 850px) {
+    .main-block__main-image-block {
+        width: 250px;
+        height: 200px;
+        margin-right: 20px !important;
+    }
+}
+
+@media (min-width: 1160px) {
+    .main-block__main-image-block {
+        width: 608px;
+        height: 496px;
+    }
+}
+
+@media (max-width: 765px) {
+    .main-block__property-card {
+        display: grid;
+        grid-template-columns: 100px auto;
+    }
+}
+
+@media (min-width: 765px) {
+    .main-block__property-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 496px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-block__info-about-card {
+        row-gap: 16px;
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 500px) {
+    .main-block__info-about-card {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-block__inner-content {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) {
+    .reviews-block__inner-content {
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,24 @@
+@media (max-width: 1020px) {
+    .review__comment {
+        width: auto;
+    }
+}
+
+@media (min-width: 1020px) {
+    .review__comment {
+        width: 688px;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-block__inner-content {
+        flex-direction: column;
+        width: 80vw;
+    }
+}
+
+@media (min-width: 600px) {
+    .reviews-block__inner-content {
+        flex-direction: row;
+    }
+}

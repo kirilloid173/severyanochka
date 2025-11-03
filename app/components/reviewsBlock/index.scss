@@ -4,8 +4,7 @@
 
     .reviews-block__inner-content {
         display: flex;
-        flex-direction: row;
-
+        
         .inner-content__authors-reviews {
             display: flex;
             flex-direction: column;
@@ -59,7 +58,6 @@
                 .review__comment {
                     font-size: 16px;
                     color: #414141;
-                    width: 688px;
                 }
             }
         }

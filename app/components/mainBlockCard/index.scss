@@ -18,7 +18,7 @@
         justify-content: center;
         height: 32px;
         font-size: 12px;
-        margin-bottom: 16px;
+        flex-wrap: wrap;
 
         .info-about-card__article {
             color: #414141;
@@ -58,11 +58,6 @@
     }
 
     .main-block__property-card {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        height: 496px;
-
         .property-card__carousel {
             display: flex;
             flex-direction: column;
@@ -92,7 +87,6 @@
         .main-block__info-block {
             display: flex;
             flex-direction: column;
-            width: 424px;
 
             .info-block__price-block {
                 display: flex;
@@ -273,7 +267,7 @@
 
     .reviews-block__inner-content {
         display: flex;
-        flex-direction: row;
+        margin-right: 16px;
 
         .inner-content__authors-reviews {
             display: flex;
@@ -482,6 +476,7 @@
     .discount-block__cards {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 40px;
     }
 }
