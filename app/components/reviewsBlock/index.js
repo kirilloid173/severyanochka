@@ -8,7 +8,7 @@ export default function ReviewsBlock({ name, stars, date, comment }) {
             <div className='authors-reviews__review'>
                 <div className='review__author'>
                     <Image
-                        src={'images/svg/card_page/reviews/user_logo_icon.svg'}
+                        src={'/images/svg/card_page/reviews/user_logo_icon.svg'}
                         alt='user'
                         width={16}
                         height={16}

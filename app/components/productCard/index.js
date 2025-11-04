@@ -24,6 +24,7 @@ export default function ProductCard({
                     alt={image_alt}
                     width={272}
                     height={160}
+                    style={{ objectFit: 'cover' }}
                     unoptimized
                 />
                 <Image

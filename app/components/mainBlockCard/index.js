@@ -5,24 +5,39 @@ import Image from 'next/image';
 import './index.scss';
 import './mobile.scss';
 
-export default function MainBlockCard() {
+export default async function MainBlockCard({
+    title,
+    article,
+    stars,
+    numberReviewsStars,
+    discount,
+    imagesMassive,
+    priceWithCard,
+    authorBrand,
+    heightProduct,
+    reviewsMassive,
+}) {
+    const res = await fetch('https://dummyjson.com/products?limit=4', {
+        cache: 'no-store',
+    });
+    const dataOtherProducts = await res.json();
+
     return (
         <>
             <div className='main-block'>
-                <p className='main-block__title'>
-                    Масло ПРОСТОКВАШИНО сливочное в/с 82% фольга без змж,
-                    Россия, 180 г
-                </p>
+                <p className='main-block__title'>{title}</p>
                 <div className='main-block__info-about-card'>
-                    <p className='info-about-card__article'>арт. 371431</p>
+                    <p className='info-about-card__article'>{article}</p>
                     <div className='info-about-card__reviews'>
-                        <ProductReviews reviews_stars={2} />
-                        <p className='reviews__number'>3 отзыва</p>
+                        <ProductReviews reviews_stars={stars} />
+                        <p className='reviews__number'>
+                            {numberReviewsStars} отзыва
+                        </p>
                     </div>
                     <div className='info-about-card__share'>
                         <Image
                             src={
-                                'images/svg/more_about_card/title_card/share_icon.svg'
+                                '/images/svg/more_about_card/title_card/share_icon.svg'
                             }
                             alt='share'
                             width={24}
@@ -33,7 +48,7 @@ export default function MainBlockCard() {
                     <div className='info-about-card__heart'>
                         <Image
                             src={
-                                'images/svg/more_about_card/title_card/heart_icon.svg'
+                                '/images/svg/more_about_card/title_card/heart_icon.svg'
                             }
                             alt='heart'
                             width={24}
@@ -44,75 +59,51 @@ export default function MainBlockCard() {
                 </div>
                 <div className='main-block__property-card'>
                     <div className='property-card__carousel'>
-                        <Image
-                            src={
-                                '/images/png/card_page/main_block_info/oil_box_front_little.png'
-                            }
-                            alt='oil_box'
-                            width={64}
-                            height={86.4}
-                        />
-                        <Image
-                            src={
-                                '/images/png/card_page/main_block_info/oil_box_angle_little.png'
-                            }
-                            alt='oil_box'
-                            width={64}
-                            height={86.4}
-                        />
-                        <Image
-                            src={
-                                '/images/png/card_page/main_block_info/oil_box_angle_little.png'
-                            }
-                            alt='oil_box'
-                            width={64}
-                            height={86.4}
-                        />
-                        <Image
-                            src={
-                                '/images/png/card_page/main_block_info/oil_box_angle_little.png'
-                            }
-                            alt='oil_box'
-                            width={64}
-                            height={86.4}
-                        />
-                        <Image
-                            src={
-                                '/images/png/card_page/main_block_info/oil_box_front_little.png'
-                            }
-                            alt='oil_box'
-                            width={64}
-                            height={86.4}
-                        />
+                        {imagesMassive.map((item) => (
+                            <Image
+                                key={item}
+                                src={item}
+                                alt='product'
+                                width={64}
+                                height={86.4}
+                                style={{ objectFit: 'cover' }}
+                                unoptimized
+                            />
+                        ))}
                     </div>
                     <div className='main-block__main-image-block'>
                         <Image
-                            src={
-                                '/images/png/card_page/main_block_info/oil_box_front_big.png'
-                            }
+                            src={imagesMassive[0]}
                             alt='big_image_card'
                             fill
                             style={{ objectFit: 'cover' }}
+                            unoptimized
                         />
-                        <p className='main-image-block__discount'>-50%</p>
+                        <p className='main-image-block__discount'>
+                            -{discount}%
+                        </p>
                     </div>
                     <div className='main-block__info-block'>
                         <div className='info-block__price-block'>
                             <div className='price-block__left-side'>
-                                <p className='left-side__price'>192,69 ₽</p>
+                                <p className='left-side__price'>
+                                    {priceWithCard * 2} ₽
+                                </p>
                                 <p className='left-side__descr_price'>
                                     Обычная цена
                                 </p>
                             </div>
                             <div className='price-block__right-side'>
-                                <p className='right-side__price'>108,99 ₽</p>
+                                <p className='right-side__price'>
+                                    {priceWithCard} ₽
+                                </p>
                                 <div className='right-side__text-under-price'>
                                     <p className='text-under-price__text'>
                                         С картой Северяночки
                                     </p>
                                     <Image
                                         src={
-                                            'images/svg/card_page/main_block_info/info_icon.svg'
+                                            '/images/svg/card_page/main_block_info/info_icon.svg'
                                         }
                                         alt='icon'
                                         width={24}
@@ -148,7 +139,7 @@ export default function MainBlockCard() {
                         <div className='info-block__notify'>
                             <Image
                                 src={
-                                    'images/svg/card_page/main_block_info/bell_off_icon.svg'
+                                    '/images/svg/card_page/main_block_info/bell_off_icon.svg'
                                 }
                                 alt='bell'
                                 width={23}
@@ -161,18 +152,20 @@ export default function MainBlockCard() {
                             <div className='table__column column-grey'>
                                 <p className='column__text-left'>Бренд</p>
                                 <p className='column__text-right'>
-                                    ПРОСТОКВАШИНО
+                                    {authorBrand}
                                 </p>
                             </div>
                             <div className='table__column'>
                                 <p className='column__text-left'>
                                     Страна производителя
                                 </p>
-                                <p className='column__text-right'>Россия</p>
+                                <p className='column__text-right'>{title}</p>
                             </div>
                             <div className='table__column column-grey'>
                                 <p className='column__text-left'>Упаковка</p>
-                                <p className='column__text-right'>180 г</p>
+                                <p className='column__text-right'>
+                                    {heightProduct} г
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -184,42 +177,18 @@ export default function MainBlockCard() {
                     С этим товаром покупают
                 </p>
                 <div className='recommendations-block__cards'>
-                    <ProductCard
-                        image_src='/images/png/card_block/peter_sausages_card.png'
-                        image_alt='pancakes'
-                        price_type='default'
-                        price_card='44,50'
-                        price_default='50,50'
-                        description_card='Г/Ц Блинчики с мясом вес, Россия'
-                        reviews_stars={2}
-                    />
-                    <ProductCard
-                        image_src='/images/png/card_block/sausage_card.png'
-                        image_alt='milk'
-                        price_type='default'
-                        price_card='44,50'
-                        price_default='50,50'
-                        description_card='Молоко ПРОСТОКВАШИНО паст. питьевое цельное отбо...'
-                        reviews_stars={2}
-                    />
-                    <ProductCard
-                        image_src='/images/png/card_block/hot_dog_card.png'
-                        image_alt='sausages'
-                        price_type='default'
-                        price_card='44,50'
-                        price_default='50,50'
-                        description_card='Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчич...'
-                        reviews_stars={2}
-                    />
-                    <ProductCard
-                        image_src='/images/png/card_block/milk_card.png'
-                        image_alt='hot_dog'
-                        price_type='default'
-                        price_card='44,50'
-                        price_default='50,50'
-                        description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
-                        reviews_stars={2}
-                    />
+                    {dataOtherProducts.products.map((item) => (
+                        <ProductCard
+                            key={item.id}
+                            image_src={item.images[0]}
+                            image_alt='product_other_buy'
+                            price_type='default'
+                            price_card={item.price}
+                            price_default={item.price}
+                            description_card={item.description}
+                            reviews_stars={item.rating}
+                        />
+                    ))}
                 </div>
             </div>
             {/* end recommendations block */}
@@ -268,24 +237,15 @@ export default function MainBlockCard() {
                         </div>
                     </div>
                     <div className='inner-content__block-messages'>
-                        <ReviewsBlock
-                            name='Татьяна'
-                            stars={5}
-                            date={'22.02.2020'}
-                            comment='приятный вкус'
-                        />
-                        <ReviewsBlock
-                            name='Мария'
-                            stars={4}
-                            date={'22.02.2020'}
-                            comment='Масло среднее, есть вкуснее'
-                        />
-                        <ReviewsBlock
-                            name='Алексей'
-                            stars={1}
-                            date={'22.02.2020'}
-                            comment='Покупали в том числе в этом весе. Масло по вкусу и органолептическим свойствам совершенно не похоже на натуральное. Упаковка выглядит как напечатанная на дешёвом принтере. На наш взгляд продукт является подделкой или контрафактной продукцией. Просим разобраться.'
-                        />
+                        {reviewsMassive.map((item, index) => (
+                            <ReviewsBlock
+                                key={index}
+                                name={item.reviewerName}
+                                stars={item.rating}
+                                date={item.date}
+                                comment={item.comment}
+                            />
+                        ))}
                         <div className='inner-content__your-comment-block'>
                             <div className='your-comment-block__place-stars'>
                                 <p className='place-stars__title'>
@@ -354,38 +314,17 @@ export default function MainBlockCard() {
                     </div>
                 </div>
                 <div className='discount-block__cards'>
-                    <ProductCard
-                        image_src='/images/png/card_block/pancakes_card.png'
-                        image_alt='hot_dog'
-                        price_card='44,50'
-                        price_default='50,50'
-                        description_card='Г/Ц Блинчики с мясом вес, Россия'
-                        reviews_stars={2}
-                    />
-                    <ProductCard
-                        image_src='/images/png/card_block/milk_card.png'
-                        image_alt='hot_dog'
-                        price_card='44,50'
-                        price_default='50,50'
-                        description_card='Молоко ПРОСТОКВАШИНО паст. питьевое цельное отбо...'
-                        reviews_stars={3}
-                    />
-                    <ProductCard
-                        image_src='/images/png/card_block/sausage_card.png'
-                        image_alt='hot_dog'
-                        price_card='44,50'
-                        price_default='50,50'
-                        description_card='Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчич...'
-                        reviews_stars={5}
-                    />
-                    <ProductCard
-                        image_src='/images/png/card_block/hot_dog_card.png'
-                        image_alt='hot_dog'
-                        price_card='44,50'
-                        price_default='50,50'
-                        description_card='Сосиски вареные МЯСНАЯ ИСТОРИЯ Молочные и С сы...'
-                        reviews_stars={4.5}
-                    />
+                    {dataOtherProducts.products.map((item) => (
+                        <ProductCard
+                            key={item.id}
+                            image_src={item.images[0]}
+                            image_alt='product_other_buy'
+                            price_card={item.price}
+                            price_default={item.price}
+                            description_card={item.description}
+                            reviews_stars={item.rating}
+                        />
+                    ))}
                 </div>
             </div>
         </>
