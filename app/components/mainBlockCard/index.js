@@ -3,6 +3,7 @@ import ProductCard from '../productCard';
 import ReviewsBlock from '../reviewsBlock';
 import PropertyCardImages from '../propertyCardImages';
 import Image from 'next/image';
+import Link from 'next/link';
 import './index.scss';
 import './mobile.scss';
 
@@ -160,16 +161,18 @@ export default async function MainBlockCard({
                 </p>
                 <div className='recommendations-block__cards'>
                     {dataOtherProducts.products.map((item) => (
-                        <ProductCard
-                            key={item.id}
-                            image_src={item.images[0]}
-                            image_alt='product_other_buy'
-                            price_type='default'
-                            price_card={item.price}
-                            price_default={item.price}
-                            description_card={item.description}
-                            reviews_stars={item.rating}
-                        />
+                        <Link key={item.id} href={`/product/${item.id}`}>
+                            <ProductCard
+                                key={item.id}
+                                image_src={item.images[0]}
+                                image_alt='product_other_buy'
+                                price_type='default'
+                                price_card={item.price}
+                                price_default={item.price}
+                                description_card={item.description}
+                                reviews_stars={item.rating}
+                            />
+                        </Link>
                     ))}
                 </div>
             </div>
@@ -299,15 +302,17 @@ export default async function MainBlockCard({
                 </div>
                 <div className='discount-block__cards'>
                     {dataOtherProducts.products.map((item) => (
-                        <ProductCard
-                            key={item.id}
-                            image_src={item.images[0]}
-                            image_alt='product_other_buy'
-                            price_card={item.price}
-                            price_default={item.price}
-                            description_card={item.description}
-                            reviews_stars={item.rating}
-                        />
+                        <Link key={item.id} href={`/product/${item.id}`}>
+                            <ProductCard
+                                key={item.id}
+                                image_src={item.images[0]}
+                                image_alt='product_other_buy'
+                                price_card={item.price}
+                                price_default={item.price}
+                                description_card={item.description}
+                                reviews_stars={item.rating}
+                            />
+                        </Link>
                     ))}
                 </div>
             </div>
