@@ -73,6 +73,10 @@
             justify-content: center;
             width: 64px;
             margin-right: 48px;
+
+            img:hover {
+                cursor: pointer;
+            }
         }
 
         .main-block__main-image-block {

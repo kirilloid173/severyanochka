@@ -1,6 +1,7 @@
 import ProductReviews from '../product-reviews';
 import ProductCard from '../productCard';
 import ReviewsBlock from '../reviewsBlock';
+import PropertyCardImages from '../propertyCardImages';
 import Image from 'next/image';
 import './index.scss';
 import './mobile.scss';
@@ -60,31 +61,10 @@ export default async function MainBlockCard({
                     </div>
                 </div>
                 <div className='main-block__property-card'>
-                    <div className='property-card__carousel'>
-                        {imagesMassive.map((item) => (
-                            <Image
-                                key={item}
-                                src={item}
-                                alt='product'
-                                width={64}
-                                height={86.4}
-                                style={{ objectFit: 'cover' }}
-                                unoptimized
-                            />
-                        ))}
-                    </div>
-                    <div className='main-block__main-image-block'>
-                        <Image
-                            src={imagesMassive[0]}
-                            alt='big_image_card'
-                            fill
-                            style={{ objectFit: 'cover' }}
-                            unoptimized
-                        />
-                        <p className='main-image-block__discount'>
-                            -{discount}%
-                        </p>
-                    </div>
+                    <PropertyCardImages
+                        imagesMassive={imagesMassive}
+                        discount={discount}
+                    />
                     <div className='main-block__info-block'>
                         <div className='info-block__price-block'>
                             <div className='price-block__left-side'>
