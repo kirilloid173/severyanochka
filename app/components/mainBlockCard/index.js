@@ -161,7 +161,7 @@ export default async function MainBlockCard({
                 </p>
                 <div className='recommendations-block__cards'>
                     {dataOtherProducts.products.map((item) => (
-                        <Link key={item.id} href={`/product/${item.id}`}>
+                        <Link key={item.id} href={`/products/${item.id}`}>
                             <ProductCard
                                 key={item.id}
                                 image_src={item.images[0]}
@@ -302,7 +302,7 @@ export default async function MainBlockCard({
                 </div>
                 <div className='discount-block__cards'>
                     {dataOtherProducts.products.map((item) => (
-                        <Link key={item.id} href={`/product/${item.id}`}>
+                        <Link key={item.id} href={`/products/${item.id}`}>
                             <ProductCard
                                 key={item.id}
                                 image_src={item.images[0]}

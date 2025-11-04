@@ -25,7 +25,7 @@ export default async function ProductsBlock({ searchByIdCategory }) {
         <>
             <div className='block-cards'>
                 {resultData.products.map((item, index) => (
-                    <Link key={index} href={`/product/${item.id}`}>
+                    <Link key={index} href={`/products/${item.id}`}>
                         <ProductCard
                             key={item.id}
                             image_src={item.images[0]}
