@@ -34,6 +34,10 @@ div.navbar {
             align-items: center;
             justify-content: center;
             gap: 8px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -49,6 +53,12 @@ div.navbar {
             align-items: center;
             justify-content: center;
             margin: 0 12px; // 24px / 2 = 12px
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom: 1px solid #414141;
+            }
 
             p {
                 font-size: 12px;
@@ -62,6 +72,11 @@ div.navbar {
             align-items: center;
             justify-content: center;
             margin-left: 28px; // 40px - 12px = 28px
+
+            &:hover {
+                cursor: pointer;
+            }
+
             p {
                 font-size: 16px;
                 margin-left: 10px;

@@ -46,6 +46,10 @@
             justify-content: center;
             gap: 8px;
             margin-right: 24px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         .info-about-card__heart {
@@ -54,6 +58,10 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -155,6 +163,10 @@
                 background-color: #ff6633;
                 margin-bottom: 18px;
 
+                &:hover {
+                    cursor: pointer;
+                }
+
                 .button-cart__icon {
                     padding-left: 16px;
                 }
@@ -193,6 +205,11 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 24px;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
 
             p {
                 font-size: 12px;
@@ -460,6 +477,11 @@
             justify-content: center;
             margin-left: 975px;
             gap: 8px;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
 
             p {
                 font-size: 16px;

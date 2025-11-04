@@ -30,9 +30,11 @@ export default async function MainBlockCard({
                     <p className='info-about-card__article'>{article}</p>
                     <div className='info-about-card__reviews'>
                         <ProductReviews reviews_stars={stars} />
-                        <p className='reviews__number'>
-                            {numberReviewsStars} отзыва
-                        </p>
+                        <a href='#block-reviews'>
+                            <p className='reviews__number'>
+                                {numberReviewsStars} отзыва
+                            </p>
+                        </a>
                     </div>
                     <div className='info-about-card__share'>
                         <Image
@@ -193,7 +195,9 @@ export default async function MainBlockCard({
             </div>
             {/* end recommendations block */}
             <div className='reviews-block'>
-                <p className='reviews-block__title'>Отзывы</p>
+                <p className='reviews-block__title' id='block-reviews'>
+                    Отзывы
+                </p>
                 <div className='reviews-block__inner-content'>
                     <div className='inner-content__stars-left'>
                         <div className='stars-left__title-block'>

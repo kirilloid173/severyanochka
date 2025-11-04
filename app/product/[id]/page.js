@@ -12,7 +12,6 @@ export default async function ProductPage({ params }) {
     });
     const data = await res.json();
 
-    console.log(await data); // REMOVE
     return (
         <>
             <Navbar />

@@ -6,6 +6,15 @@ div.footer {
     background-color: #f9f4e2;
     color: #414141;
 
+    p:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    img:hover {
+        cursor: pointer;
+    }
+
     .footer__left-side {
         display: flex;
         flex-direction: row;

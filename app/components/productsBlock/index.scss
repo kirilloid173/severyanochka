@@ -18,6 +18,11 @@ button.load-more-cards {
     margin: 0 auto;
     font-family: 'Montserrat-medium';
     margin-bottom: 80px;
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid #414141;
+    }
 }
 
 @media (max-width: 1440px) and (min-width: 900px) {
