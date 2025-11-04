@@ -1,16 +1,30 @@
 import Link from 'next/link';
 import './index.scss';
 import ProductCard from '../productCard';
-export default async function ProductsBlock() {
-    const res = await fetch('https://dummyjson.com/products?limit=16', {
-        cache: 'no-store',
-    });
-    const data = await res.json();
+export default async function ProductsBlock({ searchByIdCategory }) {
+    let resultData = {};
+
+    if (searchByIdCategory) {
+        const res = await fetch(
+            `https://dummyjson.com/products/category/${searchByIdCategory}`,
+            {
+                cache: 'no-store',
+            }
+        );
+        const data = await res.json();
+        resultData = data;
+    } else {
+        const res = await fetch('https://dummyjson.com/products?limit=16', {
+            cache: 'no-store',
+        });
+        const data = await res.json();
+        resultData = data;
+    }
 
     return (
         <>
             <div className='block-cards'>
-                {data.products.map((item, index) => (
+                {resultData.products.map((item, index) => (
                     <Link key={index} href={`/product/${item.id}`}>
                         <ProductCard
                             key={item.id}
