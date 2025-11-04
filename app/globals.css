@@ -19,3 +19,8 @@
     box-sizing: content-box;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

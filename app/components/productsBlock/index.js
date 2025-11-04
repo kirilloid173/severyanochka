@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Link from 'next/link';
 import './index.scss';
 import ProductCard from '../productCard';
 export default async function ProductsBlock() {
@@ -10,17 +10,19 @@ export default async function ProductsBlock() {
     return (
         <>
             <div className='block-cards'>
-                {data.products.map((item) => (
-                    <ProductCard
-                        key={item.id}
-                        image_src={item.images[0]}
-                        image_alt='card_image'
-                        discount={item.discountPercentage}
-                        price_card={item.price}
-                        price_default={item.price}
-                        description_card={item.description}
-                        reviews_stars={item.rating}
-                    />
+                {data.products.map((item, index) => (
+                    <Link key={index} href={`/product/${item.id}`}>
+                        <ProductCard
+                            key={item.id}
+                            image_src={item.images[0]}
+                            image_alt='card_image'
+                            discount={item.discountPercentage}
+                            price_card={item.price}
+                            price_default={item.price}
+                            description_card={item.description}
+                            reviews_stars={item.rating}
+                        />
+                    </Link>
                 ))}
             </div>
             <button className='load-more-cards'>Загрузить ещё</button>

@@ -1,11 +1,15 @@
+import Link from 'next/link';
 import './index.scss';
 import Image from 'next/image';
+
 export default function Navbar() {
     return (
         <div className='navbar'>
             <div className='navbar__inner-content'>
                 <div className='navbar__left-side'>
-                    <h1 className='navbar__title'>Магазин</h1>
+                    <Link href='/'>
+                        <h1 className='navbar__title'>Магазин</h1>
+                    </Link>
                     <button className='navbar__button-catalog'>
                         <Image
                             src={

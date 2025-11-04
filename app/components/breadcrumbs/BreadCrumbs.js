@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import './index.scss';
 import Image from 'next/image';
 
@@ -11,9 +12,11 @@ export default function BreadCrumbs({
     return (
         <div className='breadcrumbs'>
             {first_link ? (
-                <p className={!second_link ? 'breadcrumbs__last-item' : ''}>
-                    Главная
-                </p>
+                <Link href='/'>
+                    <p className={!second_link ? 'breadcrumbs__last-item' : ''}>
+                        Главная
+                    </p>
+                </Link>
             ) : null}
 
             {second_link ? (
@@ -26,9 +29,15 @@ export default function BreadCrumbs({
                         width={7}
                         height={13}
                     />
-                    <p className={!three_link ? 'breadcrumbs__last-item' : ''}>
-                        {second_link}
-                    </p>
+                    <Link href='/'>
+                        <p
+                            className={
+                                !three_link ? 'breadcrumbs__last-item' : ''
+                            }
+                        >
+                            {second_link}
+                        </p>
+                    </Link>
                 </>
             ) : null}
 
