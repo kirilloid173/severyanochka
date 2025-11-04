@@ -19,7 +19,7 @@ export default function PropertyCardImages({ imagesMassive, discount }) {
                         alt='product'
                         width={64}
                         height={86.4}
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'contain' }}
                         unoptimized
                         onClick={() => changeImage(image)}
                     />
@@ -30,7 +30,7 @@ export default function PropertyCardImages({ imagesMassive, discount }) {
                     src={srcMainImage}
                     alt='big_image_card'
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     unoptimized
                 />
                 <p className='main-image-block__discount'>-{discount}%</p>
