@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import './index.scss';
 import ProductCard from '../productCard';
+import './index.scss';
+
 export default async function ProductsBlock({ searchByIdCategory }) {
     let resultData = {};
 

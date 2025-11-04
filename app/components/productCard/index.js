@@ -1,6 +1,6 @@
-import './index.scss';
 import Image from 'next/image';
 import ProductReviews from '../product-reviews';
+import './index.scss';
 
 export default function ProductCard({
     image_src,
@@ -16,6 +16,7 @@ export default function ProductCard({
         description_card.length > 55
             ? description_card.slice(0, 55) + '...'
             : description_card;
+
     return (
         <div className='block-cards__card'>
             <div className='card__image-block'>

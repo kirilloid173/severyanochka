@@ -9,6 +9,7 @@ export default function PropertyCardImages({ imagesMassive, discount }) {
     const changeImage = (newSrc) => {
         setSrcMainImage(newSrc);
     };
+
     return (
         <>
             <div className='property-card__carousel'>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import './index.scss';
 import Image from 'next/image';
+import './index.scss';
 
 export default function BreadCrumbs({
     first_link,

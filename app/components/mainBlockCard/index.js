@@ -1,9 +1,9 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import ProductReviews from '../product-reviews';
 import ProductCard from '../productCard';
 import ReviewsBlock from '../reviewsBlock';
 import PropertyCardImages from '../propertyCardImages';
-import Image from 'next/image';
-import Link from 'next/link';
 import './index.scss';
 import './mobile.scss';
 
@@ -22,6 +22,7 @@ export default async function MainBlockCard({
     const res = await fetch('https://dummyjson.com/products?limit=4', {
         cache: 'no-store',
     });
+
     const dataOtherProducts = await res.json();
 
     return (

@@ -4,6 +4,7 @@ import ProductsPage from '../../../components/productsCards/index';
 
 export default async function ProductsListPage({ params }) {
     const { id } = await params;
+
     return (
         <>
             <Navbar />
