@@ -12,7 +12,7 @@ export default function BreadCrumbs({
     return (
         <div className='breadcrumbs'>
             {first_link ? (
-                <Link href='/'>
+                <Link href='/products/'>
                     <p className={!second_link ? 'breadcrumbs__last-item' : ''}>
                         Главная
                     </p>
@@ -29,7 +29,7 @@ export default function BreadCrumbs({
                         width={7}
                         height={13}
                     />
-                    <Link href='/'>
+                    <Link href='/products/'>
                         <p
                             className={
                                 !three_link ? 'breadcrumbs__last-item' : ''
