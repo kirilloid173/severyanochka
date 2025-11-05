@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className='navbar'>
             <div className='navbar__inner-content'>
                 <div className='navbar__left-side'>
-                    <Link href='/products/'>
+                    <Link href='/'>
                         <h1 className='navbar__title'>Магазин</h1>
                     </Link>
                     <button className='navbar__button-catalog'>

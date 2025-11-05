@@ -1,7 +1,13 @@
-import { notFound } from 'next/navigation';
+import Navbar from './/components/navbar/index';
+import Footer from './components/footer';
+import ProductsPage from './components/productsCards/index';
 
 export default function Home() {
-    notFound();
-
-    return <></>;
+    return (
+        <>
+            <Navbar />
+            <ProductsPage />
+            <Footer />
+        </>
+    );
 }
