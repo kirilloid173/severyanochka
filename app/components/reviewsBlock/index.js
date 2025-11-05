@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ProductReviews from '../product-reviews';
+import ProductReviews from '../productReviews';
 import './index.scss';
 import './mobile.scss';
 

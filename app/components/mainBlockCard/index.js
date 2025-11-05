@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import ProductReviews from '../product-reviews';
+import ProductReviews from '../productReviews';
 import ProductCard from '../productCard';
 import ReviewsBlock from '../reviewsBlock';
 import PropertyCardImages from '../propertyCardImages';
